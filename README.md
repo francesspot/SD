@@ -1,44 +1,31 @@
-**Polski** | [English](README.en.md)
+🇵🇱 **Polski** | 🇬🇧 [English](README.en.md)
 
-# Struktury Danych — projekty (SD)
+# 🧱 Struktury danych — implementacje i testy wydajności
 
-Trzy projekty w C++ z kursu *Struktury Danych*. W każdym struktury są zaimplementowane od podstaw, a następnie przetestowane wydajnościowo: każda operacja jest mierzona na 50 kopiach struktury dla różnych rozmiarów, a uśrednione wyniki trafiają do plików CSV i wykresów w Excelu.
+![C++](https://img.shields.io/badge/C++-00599C?logo=cplusplus&logoColor=white) ![Excel](https://img.shields.io/badge/Excel-217346?logo=microsoftexcel&logoColor=white)
 
-| Projekt | Temat | Porównywane struktury |
-|---------|-------|-----------------------|
-| [`Projekt_1`](Projekt_1) | Listy wiązane a tablica dynamiczna | lista jednokierunkowa, lista dwukierunkowa, tablica dynamiczna (pojemność rośnie x2) |
-| [`Projekt_2`](Projekt_2) | Kolejki priorytetowe | lista wiązana, kopiec binarny, treap (drzewo + kopiec) |
-| [`Projekt_3`](Projekt_3) | Tablice mieszające | metoda łańcuchowa, adresowanie otwarte, haszowanie z dwoma wyborami |
+> 🎓 Projekty na przedmiot **Struktury Danych** (Politechnika Wrocławska), realizowane w parze
 
-## Projekt_1 — listy i tablica dynamiczna
+Trzy projekty, w których implementowaliśmy struktury danych od zera, a potem sprawdzaliśmy w praktyce, jak szybkie są ich operacje. Każdą operację mierzyliśmy na 50 kopiach struktury i porównywaliśmy wyniki na wykresach. 📈
 
-Mierzone operacje: dodawanie i usuwanie na **początku**, na **końcu** i pod **wybranym indeksem** (środek), a także **wyszukiwanie** wartości.
-Rozmiary: 1 000 – 1 000 000 elementów. Wyniki: `results.csv`, wykresy: `results_charts.xlsx`.
+## 📦 Projekty
 
-## Projekt_2 — kolejki priorytetowe
+| | Temat | Co porównujemy |
+|---|---|---|
+| 1️⃣ [`Projekt_1`](Projekt_1) | Listy a tablica dynamiczna | lista jednokierunkowa, dwukierunkowa, tablica dynamiczna (×2 przy zapełnieniu) — dodawanie, usuwanie i szukanie, do **1 mln** elementów |
+| 2️⃣ [`Projekt_2`](Projekt_2) | Kolejki priorytetowe | lista wiązana, kopiec binarny, treap — insert, extract, peek, zmiana priorytetu, w przypadku optymistycznym, średnim i pesymistycznym |
+| 3️⃣ [`Projekt_3`](Projekt_3) | Tablice mieszające | metoda łańcuchowa, haszowanie z dwoma wyborami i **adresowanie otwarte** (moja część) — w scenariuszu bez kolizji, losowym i takim, w którym wszystko koliduje |
 
-Mierzone operacje: **dodanie**, **usunięcie** elementu o najwyższym priorytecie, **rozmiar**, **peek** oraz **zmiana priorytetu** wybranego elementu.
-Rozmiary: 1 000 – 50 000 elementów. Osobno zmierzono przypadek optymistyczny, średni i pesymistyczny — zob. pliki `results_priority_queue*.csv` i odpowiadające im `*_charts.xlsx`.
+## 🛠️ Technologie
 
-## Projekt_3 — tablice mieszające
+C++17 · `std::chrono` · Excel (wykresy)
 
-Mierzone operacje: **wstawienie** i **usunięcie** klucza.
-Rozmiary: 1 000 – 1 000 000 kluczy, w trzech scenariuszach:
+## 🚀 Uruchomienie
 
-- **optymistyczny** — kolejne klucze, brak kolizji,
-- **średni** — klucze losowe,
-- **pesymistyczny** — klucze dobrane tak, by wszystkie trafiały do tego samego miejsca (rozmiary powyżej 500 000 są pomijane, bo koszt rośnie do O(n²)).
-
-Wyniki: `wyniki_Hash_<scenariusz>.csv` oraz `*_wykresy.xlsx`.
-
-## Kompilacja i uruchomienie
-
-Każdy projekt to jeden `main.cpp`, który dołącza własne nagłówki:
+Każdy projekt to jeden `main.cpp`:
 
 ```bash
 cd Projekt_3
 g++ -std=c++17 -O2 main.cpp -o main
 ./main
 ```
-
-Pliki CSV używają separatora `;`. Czasy podane są w nanosekundach.

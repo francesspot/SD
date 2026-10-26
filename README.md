@@ -6,15 +6,15 @@
 
 > 🎓 Projekty na przedmiot **Struktury Danych** (Politechnika Wrocławska), realizowane w parze
 
-Trzy projekty, w których implementowaliśmy struktury danych od zera, a potem sprawdzaliśmy w praktyce, jak szybkie są ich operacje. Każdą operację mierzyliśmy na 50 kopiach struktury i porównywaliśmy wyniki na wykresach. 📈
+Trzy projekty, w których struktury danych zostały zaimplementowane od podstaw, a następnie porównane pod względem wydajności. Każda operacja była mierzona na 50 kopiach struktury, a wyniki zestawione na wykresach.
 
 ## 📦 Projekty
 
-| | Temat | Co porównujemy |
+| Projekt | Temat | Co porównujemy |
 |---|---|---|
-| 1️⃣ [`Projekt_1`](Projekt_1) | Listy a tablica dynamiczna | lista jednokierunkowa, dwukierunkowa, tablica dynamiczna (×2 przy zapełnieniu) — dodawanie, usuwanie i szukanie, do **1 mln** elementów |
-| 2️⃣ [`Projekt_2`](Projekt_2) | Kolejki priorytetowe | lista wiązana, kopiec binarny, treap — insert, extract, peek, zmiana priorytetu, w przypadku optymistycznym, średnim i pesymistycznym |
-| 3️⃣ [`Projekt_3`](Projekt_3) | Tablice mieszające | metoda łańcuchowa, haszowanie z dwoma wyborami i **adresowanie otwarte** (moja część) — w scenariuszu bez kolizji, losowym i takim, w którym wszystko koliduje |
+| [`Projekt_1`](Projekt_1) | Listy a tablica dynamiczna | lista jednokierunkowa, dwukierunkowa, tablica dynamiczna (×2 przy zapełnieniu) — dodawanie, usuwanie i szukanie, do **1 mln** elementów |
+| [`Projekt_2`](Projekt_2) | Kolejki priorytetowe | lista wiązana, kopiec binarny, treap — insert, extract, peek, zmiana priorytetu, w przypadku optymistycznym, średnim i pesymistycznym |
+| [`Projekt_3`](Projekt_3) | Tablice mieszające | metoda łańcuchowa, haszowanie z dwoma wyborami i **adresowanie otwarte** (moja część) — w scenariuszu bez kolizji, losowym i takim, w którym wszystko koliduje |
 
 ## 🛠️ Technologie
 
